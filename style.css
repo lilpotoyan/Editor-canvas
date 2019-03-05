@@ -1,0 +1,279 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.titlePage {
+    width: 600px;
+    height: 120px;
+    color: rgb(220, 224, 228);
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.titlePage:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+#content{
+    display: flex;
+}
+
+
+#allimages {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(139, 139, 139, 0.808);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#allimagesdiv {
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+}
+
+img {
+    width: 50%;
+}
+
+#myCanvas {
+    position: fixed;
+    margin: 60px ;
+}
+
+#crop {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000000;
+    position: absolute;
+    z-index: 9;
+    resize: both;
+    cursor: move;
+    overflow: auto;
+    position: fixed;
+    margin: 50px;
+}
+
+#plus {
+  position: fixed;
+  margin: 20px 50px auto 60px;
+  background-color: rgba(93, 95, 98, 0.904);
+  color: white;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+#plus:hover, #minus:hover, #cropbutton:hover {
+  background-color: rgba(53, 55, 56, 0.904);
+}
+
+#minus {
+    position: fixed;
+    margin: 20px 50px auto 120px;
+    background-color: rgba(93, 95, 98, 0.904);
+    color: white;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#cropbutton {
+    position: fixed;
+    margin: 20px 0px auto 190px;
+    background-color: rgba(93, 95, 98, 0.904);
+    color: white;
+    width: 80px; 
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.range {
+    position: fixed;
+    margin: 20px 0px 5px 110px;
+}
+
+#mydiv {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000000;
+    position: absolute;
+    z-index: 9;
+    resize: both;
+    cursor: move;
+    overflow: auto;
+    position: fixed;
+    margin: 50px;
+  }
+
+  
+ #resizable {
+    width: 25px;
+    height: 25px;
+    z-index: 1000;
+    position: fixed;
+    top: 85px;
+    left: 838px;
+  }
+
+
+  #resizable .resizers{
+    width: 100%;
+    height: 100%;
+    border: 3px solid #cacaca;
+  }
+
+  #resizable .resizers{
+    width: 100%;
+    height: 100%;
+    border: 3px solid #aeafb1;
+    box-sizing: border-box;
+  }
+  
+  #resizable .resizers .resizer{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+    background: white;
+    border: 3px solid #a0a6b1;
+  }
+  
+  #resizable .resizers .resizer{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #a7b5ca;
+    position: absolute;
+  }
+
+  #resizable .resizers .resizer.top-left {
+    left: -5px;
+    top: -5px;
+    cursor: nwse-resize; 
+  }
+
+  #resizable .resizers .resizer.top-right {
+    right: -5px;
+    top: -5px;
+    cursor: nesw-resize;
+  }
+  
+  #resizable .resizers .resizer.bottom-left {
+    left: -5px;
+    bottom: -5px;
+    cursor: nesw-resize;
+  }
+
+  #resizable .resizers .resizer.bottom-right {
+    right: -5px;
+    bottom: -5px;
+    cursor: nwse-resize;
+  }
+
+  .modal {
+    display: none; 
+    position: fixed; 
+    margin: 20px;
+    z-index: 1000; 
+    padding: 100px; 
+    width: 500px;
+    height: 600px; 
+    overflow: auto; 
+    border-radius: 10%;
+    background-color: rgba(59, 59, 59, 0.4); 
+    box-shadow: 1px 4px 100px 1px #494949;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #downloadbutton {
+      width: 120px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: rgba(245, 240, 240, 0.644);
+      outline: none;
+  }
+
+  #downloadbutton:hover {
+    box-shadow: 1px 4px 100px 1px #9b9da8;
+  }
+
+  .dwndiv {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .cropedphoto {
+      font-size: 25px;
+      font-family: monospace;
+      margin: 20px;
+      text-align: center;
+      border-radius: 10%;
+      font-family: cursive;
+      font-weight: 600;
+      background-color: #6c6e7933;
+      box-shadow: 1px 4px 100px 1px #6c6e79;
+  }
+
+  .cropedphoto:hover {
+    color: rgb(145, 145, 145);
+    box-shadow: 1px 4px 100px 1px #6c6e79;
+  }
+
+  #cropimgwidth, #cropimgheight  {
+    font-size: 19px;
+    font-family: cursive;
+    text-align: center;
+    font-weight: 600;
+  }
+
+   
+  
+  

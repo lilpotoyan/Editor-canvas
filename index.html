@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Edit image</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="content">
+		<div id="allimages">
+			<div class="title">
+				<div class="titlePage">Choose and edit image</div>
+			</div>
+			<div id="allimagesdiv">
+			</div>
+		</div>
+		<div id="canvas">
+			<div class="canvas-wrap">
+				<div id='resizable'>
+					<div class='resizers'>
+						<div class='resizer top-left'></div>
+						<div class='resizer top-right'></div>
+						<div class='resizer bottom-left'></div>
+						<div class='resizer bottom-right'></div>
+					</div>
+				</div>
+				<canvas id="myCanvas" width="600" height="600"></canvas>
+			</div>
+			<div>
+				<button id="plus">+</button>
+				<button id="minus">-</button>
+				<button id="cropbutton">Crop</button>
+			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<div class="cropedphoto">Croped photo!</div>
+					<div id="cropimgwidth">Width: px</div>
+					<div id="cropimgheight">height: px</div>
+					<div class="dwndiv">
+						<a href="#" id="download" download><button id="downloadbutton">Download</button></a>
+					</div>
+					<canvas id="inerModalCanvas"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
